@@ -1,0 +1,6 @@
+{
+    "planningConfig": {
+        "baseDir": "testDataPlans",
+        "dataPlanVersionFile": "rob_test-v3"
+    }
+}

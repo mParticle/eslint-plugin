@@ -1,0 +1,223 @@
+{
+    "version": 3,
+    "data_plan_id": "rob_test",
+    "version_description": null,
+    "activated_environment": "none",
+    "created_on": "2020-01-17T18:11:03.603",
+    "created_by": "ring@mparticle.com",
+    "last_modified_on": "2020-03-05T20:22:39.093",
+    "last_modified_by": "ring@mparticle.com",
+    "version_document": {
+        "data_points": [
+            {
+                "description": "User Attributes",
+                "match": {
+                    "type": "user_attributes",
+                    "criteria": {}
+                },
+                "validator": {
+                    "type": "json_schema",
+                    "definition": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "height": {
+                                "description": "",
+                                "pattern": "^-?\\d+(\\.\\d+)?([eE][+\\-]?\\d+)?$",
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            },
+            {
+                "description": "test",
+                "match": {
+                    "type": "custom_event",
+                    "criteria": {
+                        "event_name": "testEvent1",
+                        "custom_event_type": "other"
+                    }
+                },
+                "validator": {
+                    "type": "json_schema",
+                    "definition": {
+                        "properties": {
+                            "data": {
+                                "additionalProperties": true,
+                                "properties": {
+                                    "custom_event_type": {
+                                        "const": "other"
+                                    },
+                                    "event_name": {
+                                        "const": "testEvent1"
+                                    },
+                                    "custom_attributes": {
+                                        "additionalProperties": true,
+                                        "properties": {
+                                            "attrKey1": {
+                                                "description": "",
+                                                "type": "string"
+                                            },
+                                            "requiredKey1": {
+                                                "description": "",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "requiredKey1"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "custom_event_type",
+                                    "event_name",
+                                    "custom_attributes"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "description": "test description",
+                "match": {
+                    "type": "custom_event",
+                    "criteria": {
+                        "event_name": "test-nav",
+                        "custom_event_type": "navigation"
+                    }
+                },
+                "validator": {
+                    "type": "json_schema",
+                    "definition": {
+                        "properties": {
+                            "data": {
+                                "additionalProperties": true,
+                                "properties": {
+                                    "custom_event_type": {
+                                        "const": "navigation"
+                                    },
+                                    "event_name": {
+                                        "const": "test-nav"
+                                    },
+                                    "custom_attributes": {
+                                        "additionalProperties": true,
+                                        "properties": {
+                                            "foo": {
+                                                "description": "abc",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": []
+                                    }
+                                },
+                                "required": [
+                                    "custom_event_type",
+                                    "event_name"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "description": "",
+                "match": {
+                    "type": "custom_event",
+                    "criteria": {
+                        "event_name": "search",
+                        "custom_event_type": "search"
+                    }
+                },
+                "validator": {
+                    "type": "json_schema",
+                    "definition": {
+                        "properties": {
+                            "data": {
+                                "additionalProperties": true,
+                                "properties": {
+                                    "custom_event_type": {
+                                        "const": "search"
+                                    },
+                                    "event_name": {
+                                        "const": "search"
+                                    },
+                                    "custom_attributes": {
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "search-attr": {
+                                                "description": "",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "search-attr"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "custom_event_type",
+                                    "event_name",
+                                    "custom_attributes"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "description": "",
+                "match": {
+                  "type": "custom_event",
+                  "criteria": {
+                    "event_name": "test purchase",
+                    "custom_event_type": "transaction"
+                  }
+                },
+                "validator": {
+                  "type": "json_schema",
+                  "definition": {
+                    "properties": {
+                      "data": {
+                        "additionalProperties": true,
+                        "properties": {
+                          "custom_event_type": {
+                            "const": "transaction"
+                          },
+                          "event_name": {
+                            "const": "test purchase"
+                          },
+                          "custom_attributes": {
+                            "additionalProperties": false,
+                            "properties": {
+                              "foo": {
+                                "description": "",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "foo"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "custom_event_type",
+                          "event_name",
+                          "custom_attributes"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+        ],
+        "settings": {
+            "validation_actions": {
+                "event": "allow",
+                "event_attribute": "allow",
+                "user_attribute": "allow"
+            }
+        }
+    }
+}
