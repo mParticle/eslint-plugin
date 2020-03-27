@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Linting rules to adhere to your mParticle data plan",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "repository": "https://github.com/mparticle-integrations/mparticle-javascript-integration-google-analytics",
   "scripts": {
     "test": "ENVIRONMENT=testing mocha tests --recursive"
   },
@@ -14,7 +18,7 @@
   },
   "dependencies": {
     "@mparticle/data-planning-node": "0.0.1",
-    "@mparticle/web-sdk": "^2.11.5",
+    "@mparticle/web-sdk": "^2.11.8",
     "eslint": "^6.8.0",
     "jsdom": "^16.0.0"
   }
