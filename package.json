@@ -1,12 +1,12 @@
 {
   "name": "@mparticle/eslint-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Linting rules to adhere to your mParticle data plan",
   "main": "lib/index.js",
   "files": [
     "lib"
   ],
-  "repository": "https://github.com/mparticle-integrations/mparticle-javascript-integration-google-analytics",
+  "repository": "https://github.com/mparticle/eslint-plugin",
   "scripts": {
     "test": "ENVIRONMENT=testing mocha tests --recursive"
   },
