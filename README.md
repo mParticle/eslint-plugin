@@ -2,7 +2,7 @@
 
 # @mparticle/eslint-plugin
 
-Data quality at mParticle begins with data planning and getting data ingestion right.
+Data quality at mParticle begins with data planning and getting data ingestion right. 
 
 The mParticle ESLint plugin allows developers to lint their code based on their company's [mParticle Data Plan](https://docs.mparticle.com/guides/data-master/#data-plans).
 
