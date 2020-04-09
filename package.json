@@ -1,6 +1,6 @@
 {
   "name": "@mparticle/eslint-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2-beta.1",
   "description": "Linting rules to adhere to your mParticle data plan",
   "main": "lib/index.js",
   "files": [
