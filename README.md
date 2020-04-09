@@ -17,8 +17,7 @@ The mParticle ESLint plugin allows developers to lint their code based on their 
 ```
 {
     "planningConfig": {
-        "baseDir": "mParticleConfig",
-        "dataPlanVersionFile": "dataPlan.json"
+        "dataPlanVersionFile": "./dataPlan.json" // can be absolute or relative path
     }
 }
 ```
