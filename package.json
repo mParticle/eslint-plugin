@@ -14,12 +14,12 @@
   "author": "mParticle",
   "license": "Apache-2.0",
   "devDependencies": {
-    "mocha": "^6.2.2"
+    "mocha": "^10.2.0"
   },
   "dependencies": {
     "@mparticle/data-planning-node": "0.0.1",
     "@mparticle/web-sdk": "^2.11.8",
-    "eslint": "^6.8.0",
+    "eslint": "^8.43.0",
     "jsdom": "^16.0.0"
   }
 }
